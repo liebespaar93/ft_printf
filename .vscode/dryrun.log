@@ -1,0 +1,38 @@
+make: Entering directory `/Users/kyoulee/Documents/git/ft_printf'
+mkdir obj
+cc -Wall -Werror -Wextra -I include/ -c ft_printf.c -o obj/ft_printf.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_dtoa.c -o obj/ft_dtoa.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_etoa.c -o obj/ft_etoa.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_itoa.c -o obj/ft_itoa.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_memcpy.c -o obj/ft_memcpy.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_memset.c -o obj/ft_memset.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_str_diff.c -o obj/ft_str_diff.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_str_upper.c -o obj/ft_str_upper.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strchr_index.c -o obj/ft_strchr_index.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strchr_num.c -o obj/ft_strchr_num.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strcpy.c -o obj/ft_strcpy.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strjoin.c -o obj/ft_strjoin.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strlcpy.c -o obj/ft_strlcpy.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strlen.c -o obj/ft_strlen.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strmcpy.c -o obj/ft_strmcpy.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_strncmp.c -o obj/ft_strncmp.o
+cc -Wall -Werror -Wextra -I include/ -c src/ft_va_arg_index.c -o obj/ft_va_arg_index.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf/ft_printf_percent.c -o obj/ft_printf_percent.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent/ft_printf_asterisk.c -o obj/ft_printf_asterisk.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent/ft_printf_conversion.c -o obj/ft_printf_conversion.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent/ft_printf_flag.c -o obj/ft_printf_flag.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent/ft_printf_length.c -o obj/ft_printf_length.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent/ft_printf_num_type.c -o obj/ft_printf_num_type.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent/ft_printf_precision.c -o obj/ft_printf_precision.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent/ft_printf_width.c -o obj/ft_printf_width.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_a_trans.c -o obj/ft_printf_a_trans.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_cs.c -o obj/ft_printf_cs.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_dioux.c -o obj/ft_printf_dioux.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_fega.c -o obj/ft_printf_fega.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_n.c -o obj/ft_printf_n.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_p.c -o obj/ft_printf_p.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_syntax_error.c -o obj/ft_printf_syntax_error.o
+cc -Wall -Werror -Wextra -I include/ -c src_printf_percent_conversion/ft_printf_syntaxing.c -o obj/ft_printf_syntaxing.o
+ar src libftprintf.a  ./obj/ft_printf.o  ./obj/ft_dtoa.o  ./obj/ft_etoa.o  ./obj/ft_itoa.o  ./obj/ft_memcpy.o  ./obj/ft_memset.o  ./obj/ft_str_diff.o  ./obj/ft_str_upper.o  ./obj/ft_strchr_index.o  ./obj/ft_strchr_num.o  ./obj/ft_strcpy.o  ./obj/ft_strjoin.o  ./obj/ft_strlcpy.o  ./obj/ft_strlen.o  ./obj/ft_strmcpy.o  ./obj/ft_strncmp.o  ./obj/ft_va_arg_index.o  ./obj/ft_printf_percent.o  ./obj/ft_printf_asterisk.o  ./obj/ft_printf_conversion.o  ./obj/ft_printf_flag.o  ./obj/ft_printf_length.o  ./obj/ft_printf_num_type.o  ./obj/ft_printf_precision.o  ./obj/ft_printf_width.o  ./obj/ft_printf_a_trans.o  ./obj/ft_printf_cs.o  ./obj/ft_printf_dioux.o  ./obj/ft_printf_fega.o  ./obj/ft_printf_n.o  ./obj/ft_printf_p.o  ./obj/ft_printf_syntax_error.o  ./obj/ft_printf_syntaxing.o
+make: Leaving directory `/Users/kyoulee/Documents/git/ft_printf'
+ 

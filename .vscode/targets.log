@@ -1,0 +1,562 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Sun Aug 14 01:35:07 2022
+
+# Variables
+
+# automatic
+ 
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 25)
+SRC = ft_printf.c
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from `Makefile', line 16)
+CPPFLAGS = -Wall -Werror -Wextra
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/kyoulee/Documents/git/ft_printf
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"ko","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 22)
+OBJ_DIR = ./obj
+# makefile (from `Makefile', line 43)
+SRCS_PRINTF_C = src/ft_printf_percent.c
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+INFOPATH = /opt/homebrew/share/info:
+# makefile (from `Makefile', line 97)
+OBJS_CLEAN = $(OBJECTS)
+# makefile (from `Makefile', line 21)
+SRC_PRINTF_PERCENT_CONVERSION_DIR = ./src_printf_percent_conversion
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+# makefile (from `Makefile', line 64)
+SRCS_PRINTF_PERCENT = $(notdir $(SRCS_PRINTF_PERCENT_C))
+# makefile (from `Makefile', line 26)
+SRCS_C = ft_dtoa.c ft_etoa.c ft_itoa.c ft_memcpy.c ft_memset.c ft_str_diff.c ft_str_upper.c ft_strchr_index.c ft_strchr_num.c ft_strcpy.c ft_strjoin.c ft_strlcpy.c ft_strlen.c ft_strmcpy.c ft_strncmp.c ft_va_arg_index.c
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# makefile (from `Makefile', line 19)
+SRC_PRINTF_DIR = ./src_printf
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.lK2opzWzEV/Listeners
+# automatic
+%F = $(notdir $%)
+# makefile (from `Makefile', line 23)
+OBJ_DIR_CLEAN = ./obj
+# makefile (from `Makefile', line 67)
+OBJS = $(SRC:.c=.o) $(SRCS:.c=.o) $(SRCS_PRINTF:.c=.o) $(SRCS_PRINTF_PERCENT:.c=.o) $(SRCS_PRINTF_PERCENT_CONVERSION:.c=.o)
+# environment
+PWD = /Users/kyoulee/Documents/git/ft_printf
+# makefile (from `Makefile', line 63)
+SRCS_PRINTF = $(notdir $(SRCS_PRINTF_C))
+# environment
+HOMEBREW_CELLAR = /opt/homebrew/Cellar
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+MANPATH = /opt/homebrew/share/man::
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/kyoulee
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/kyoulee/Library/Application Support/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
+# environment
+LOGNAME = kyoulee
+# makefile (from `Makefile', line 20)
+SRC_PRINTF_PERCENT_DIR = ./src_printf_percent
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from `Makefile', line 62)
+SRCS = $(notdir $(SRCS_C))
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 15)
+CC = cc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = kyoulee
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 17)
+INCLUDE = -I include/
+# makefile (from `Makefile', line 13)
+NAME = libftprintf.a
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+ 
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/3l/_b_4697s3xj0ly4vm2tfkzk80000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/kyoulee/Library/Application Support/Code/1.70.1-main.sock
+# makefile (from `Makefile', line 53)
+SRCS_PRINTF_PERCENT_CONVERSION_C = src/ft_printf_a_trans.c src/ft_printf_cs.c src/ft_printf_dioux.c src/ft_printf_fega.c src/ft_printf_n.c src/ft_printf_p.c src/ft_printf_syntax_error.c src/ft_printf_syntaxing.c
+# environment
+MallocNanoZone = 0
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MAIL = kyoulee@student.42seoul.kr
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.4278795.4278801
+# environment
+HOMEBREW_PREFIX = /opt/homebrew
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+HOMEBREW_REPOSITORY = /opt/homebrew
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x3:0x33
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# makefile (from `Makefile', line 18)
+SRC_DIR = ./src
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+MAKELEVEL := 0
+# makefile (from `Makefile', line 69)
+OBJECTS = $(patsubst %.o, $(OBJ_DIR)/%.o, $(OBJS))
+# environment
+LANG = C
+# makefile (from `Makefile', line 65)
+SRCS_PRINTF_PERCENT_CONVERSION = $(notdir $(SRCS_PRINTF_PERCENT_CONVERSION_C))
+# environment
+VSCODE_PID = 8487
+# makefile (from `Makefile', line 45)
+SRCS_PRINTF_PERCENT_C = src/ft_printf_asterisk.c src/ft_printf_conversion.c src/ft_printf_flag.c src/ft_printf_length.c src/ft_printf_num_type.c src/ft_printf_precision.c src/ft_printf_width.c
+# variable set hash-table stats:
+# Load=85/1024=8%, Rehash=0, Collisions=9/140=6%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# ./src_printf_percent (device 16777229, inode 4371818): No files, no impossibilities so far.
+# . (device 16777229, inode 4371656): 14 files, no impossibilities.
+# ./src (device 16777229, inode 4371799): No files, no impossibilities so far.
+# ./src_printf (device 16777229, inode 4371816): No files, no impossibilities so far.
+# ./src_printf_percent_conversion (device 16777229, inode 4371826): No files, no impossibilities so far.
+
+# 14 files, no impossibilities in 5 directories.
+
+# Implicit Rules
+
+obj/%.o: %.c
+#  commands to execute (from `Makefile', line 80):
+	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	
+
+obj/%.o: ./src/%.c
+#  commands to execute (from `Makefile', line 83):
+	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	
+
+obj/%.o: ./src_printf/%.c
+#  commands to execute (from `Makefile', line 86):
+	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	
+
+obj/%.o: ./src_printf_percent/%.c
+#  commands to execute (from `Makefile', line 89):
+	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	
+
+obj/%.o: ./src_printf_percent_conversion/%.c
+#  commands to execute (from `Makefile', line 92):
+	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	
+
+# 5 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+obj/ft_strlcpy.o:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_strmcpy.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_strncmp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_strcpy.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_cs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: libftprintf.a
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+# Not a target:
+obj/ft_printf_num_type.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_width.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_str_upper.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_syntax_error.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_percent.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_precision.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 11:22:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/ft_printf_length.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_dtoa.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_n.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_memcpy.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_itoa.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_strlen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+# makefile (from `Makefile', line 102)
+# OBJS_CLEAN += $(NAME)
+# variable set hash-table stats:
+# Load=1/32=3%, Rehash=0, Collisions=0/2=0%
+
+# Not a target:
+obj/ft_str_diff.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_memset.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_fega.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_asterisk.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj:
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-13 11:22:44
+#  File has been updated.
+#  Successfully updated.
+#  commands to execute (from `Makefile', line 74):
+	mkdir obj
+	
+
+# Not a target:
+ft_printf.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 11:22:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/ft_strchr_num.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_strjoin.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj/ft_printf.o: ft_printf.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `ft_printf'
+#  Last modified 2022-08-13 11:22:44
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/ft_printf.o
+# automatic
+# % := 
+# automatic
+ 
+# * := ft_printf
+# automatic
+# + := ft_printf.c
+# automatic
+# | := 
+# automatic
+# < := ft_printf.c
+# automatic
+# ^ := ft_printf.c
+# automatic
+# ? := ft_printf.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/15=13%
+#  commands to execute (from `Makefile', line 80):
+	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_va_arg_index.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_conversion.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_p.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 100):
+	rm -f $(OBJS_CLEAN) 
+	
+
+# Not a target:
+obj/ft_strchr_index.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_syntaxing.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_dioux.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_a_trans.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libftprintf.a: obj obj/ft_printf.o obj/ft_dtoa.o obj/ft_etoa.o obj/ft_itoa.o obj/ft_memcpy.o obj/ft_memset.o obj/ft_str_diff.o obj/ft_str_upper.o obj/ft_strchr_index.o obj/ft_strchr_num.o obj/ft_strcpy.o obj/ft_strjoin.o obj/ft_strlcpy.o obj/ft_strlen.o obj/ft_strmcpy.o obj/ft_strncmp.o obj/ft_va_arg_index.o obj/ft_printf_percent.o obj/ft_printf_asterisk.o obj/ft_printf_conversion.o obj/ft_printf_flag.o obj/ft_printf_length.o obj/ft_printf_num_type.o obj/ft_printf_precision.o obj/ft_printf_width.o obj/ft_printf_a_trans.o obj/ft_printf_cs.o obj/ft_printf_dioux.o obj/ft_printf_fega.o obj/ft_printf_n.o obj/ft_printf_p.o obj/ft_printf_syntax_error.o obj/ft_printf_syntaxing.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-13 11:22:45
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  commands to execute (from `Makefile', line 77):
+	ar src $(NAME) $(OBJECTS)
+	
+
+# Not a target:
+obj/ft_etoa.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ft_printf_flag.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=44/1024=4%, Rehash=0, Collisions=4/104=4%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Sun Aug 14 01:35:07 2022
+
+ 

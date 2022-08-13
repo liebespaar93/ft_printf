@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+         #
+#    By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/10 08:16:11 by kyoulee           #+#    #+#              #
-#    Updated: 2022/06/14 16:18:28 by kyoulee          ###   ########.fr        #
+#    Updated: 2022/08/14 01:35:41 by kyoulee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,8 @@ OBJECTS = $(patsubst %.o, $(OBJ_DIR)/%.o, $(OBJS))
 
 all: $(NAME)
 
+bonus: $(NAME)
+
 $(OBJ_DIR) :
 	mkdir obj
 
@@ -104,4 +106,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re bonus
