@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 23:39:25 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/06/10 16:42:27 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/15 05:51:05 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-
-typedef struct s_list
-{
-	int				len;
-	void			*data;
-	struct s_list	*next;
-}	t_list;
 
 int		ft_printf(char *str, ...);
 
