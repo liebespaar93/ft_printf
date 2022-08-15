@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_fega.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:00:45 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/06/10 14:56:34 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/15 11:46:13 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ void	ft_printf_ftoa(long double num, \
 	integer = (unsigned __int128)num;
 	decimal = num - integer + 1;
 	(*c_printf_percent)->len += \
-		ft_itoa(integer, &((*c_printf_percent)->front), 10);
+		ft_itoa_base(integer, &((*c_printf_percent)->front), 10);
 	if (c_syntax.precision > 0 || c_syntax.precision == -1)
 	{
 		if (c_syntax.precision == -1)

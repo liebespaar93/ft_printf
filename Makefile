@@ -6,15 +6,76 @@
 #    By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/10 08:16:11 by kyoulee           #+#    #+#              #
-#    Updated: 2022/08/14 01:35:41 by kyoulee          ###   ########.fr        #
+#    Updated: 2022/08/15 12:27:28 by kyoulee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 CC = cc
-CPPFLAGS = -Wall -Werror -Wextra
-INCLUDE = -I include/
+CXXFLAGS = $(NULL)
+CFLAGS = -Wall -Werror -Wextra
+DFLAGS = $(NULL)
+IFLAGS =						\
+	-I $(INCLUDE_DIR)			\
+	-I $(INCLUDE_LIBFT_DIR)
+LDFLAGS =						\
+	-L $(LIBFT_DIR)
+LDLIBS =						\
+	-lft
+	
+
+#####***** COLOR *****#####
+BG_RED     = \033[41m
+BG_GREEN   = \033[42m
+BG_YELLOW  = \033[43m
+BG_BLUE    = \033[44m
+BG_MAGENTA = \033[45m
+BG_CYAN    = \033[46m
+BG_LGREY   = \033[47m
+BG_DGREY   = \033[100m
+BG_LRED    = \033[101m
+BG_LGREEN  = \033[102m
+BG_LYELLOW = \033[103m
+BG_LBLUE   = \033[104m
+BG_LMAGENTA= \033[105m
+BG_LCYAN   = \033[106m
+BG_WHITE   = \033[107m
+BG_MAKE1   = \033[48;5;236m
+BG_MAKE2   = \033[48;5;238m
+BG_MAKE3   = \033[48;5;240m
+
+FG_BLACK   = \033[30m
+FG_RED     = \033[31m
+FG_GREEN   = \033[32m
+FG_YELLOW  = \033[33m
+FG_BLUE    = \033[34m
+FG_MAGENTA = \033[35m
+FG_CYAN    = \033[36m
+FG_LGREY   = \033[37m
+FG_DGREY   = \033[90m
+FG_LRED    = \033[91m
+FG_LGREEN  = \033[92m
+FG_LYELLOW = \033[93m
+FG_LBLUE   = \033[94m
+FG_LMAGENTA= \033[95m
+FG_LCYAN   = \033[96m
+FG_WHITE   = \033[97m
+ 
+CL_BOLD   = \033[1m
+CL_DIM    = \033[2m
+CL_UDLINE = \033[4m
+CL_BLINK  = \033[5m
+CL_INVERT = \033[7m
+CL_HIDDEN = \033[8m
+ 
+NO_COLOR = \033[0m
+
+
+
+ROOTDIR = $(abspath $(dir $(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))))
+INCLUDE_DIR = $(ROOTDIR)/include
+
 SRC_DIR = ./src
 SRC_PRINTF_DIR = ./src_printf
 SRC_PRINTF_PERCENT_DIR = ./src_printf_percent
@@ -22,23 +83,14 @@ SRC_PRINTF_PERCENT_CONVERSION_DIR = ./src_printf_percent_conversion
 OBJ_DIR = ./obj
 OBJ_DIR_CLEAN = ./obj
 
+## MODULES ##
+LIBFT = $(LIBFT_DIR)/libft.a
+LIBFT_DIR = $(ROOTDIR)/modules/Libft
+INCLUDE_LIBFT_DIR = $(LIBFT_DIR)/include
+
+
 SRC = ft_printf.c
-SRCS_C =	ft_dtoa.c \
-			ft_etoa.c \
-			ft_itoa.c \
-			ft_memcpy.c \
-			ft_memset.c \
-			ft_str_diff.c \
-			ft_str_upper.c \
-			ft_strchr_index.c \
-			ft_strchr_num.c \
-			ft_strcpy.c \
-			ft_strjoin.c \
-			ft_strlcpy.c \
-			ft_strlen.c \
-			ft_strmcpy.c \
-			ft_strncmp.c \
-			ft_va_arg_index.c
+SRCS_C =	ft_va_arg_index.c
 
 SRCS_PRINTF_C =	src/ft_printf_percent.c
 
@@ -75,30 +127,41 @@ bonus: $(NAME)
 $(OBJ_DIR) :
 	mkdir obj
 
-$(NAME) : $(OBJ_DIR) $(OBJECTS) 
-	ar src $(NAME) $(OBJECTS)
+$(NAME) : $(OBJ_DIR) $(OBJECTS) $(LIBFT)
+	ar -src $(NAME) $(OBJECTS) $(LIBFT)
 
 $(OBJ_DIR)/%.o : %.c
-	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	$(CC) $(CPPFLAGS) $(IFLAGS) -c $< -o $@
 
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c
-	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	$(CC) $(CPPFLAGS) $(IFLAGS) -c $< -o $@
 
 $(OBJ_DIR)/%.o : $(SRC_PRINTF_DIR)/%.c
-	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	$(CC) $(CPPFLAGS) $(IFLAGS) -c $< -o $@
 
 $(OBJ_DIR)/%.o : $(SRC_PRINTF_PERCENT_DIR)/%.c
-	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
+	$(CC) $(CPPFLAGS) $(IFLAGS) -c $< -o $@
 
 $(OBJ_DIR)/%.o : $(SRC_PRINTF_PERCENT_CONVERSION_DIR)/%.c
-	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
-
-$(TARGET) : $(OBJECTS)
-	$(CC) $(CPPFLAGS) $(OBJECTS) -o $(TARGET) $(LDFLAGS)
-
+	$(CC) $(CPPFLAGS) $(IFLAGS) -c $< -o $@
+	
 OBJS_CLEAN = $(OBJECTS)
 
-clean : 
+## MODULES ##
+$(LIBFT):
+	echo "$(FG_MAGENTA)module $(FG_LYELLOW)Libft$(NO_COLOR) -> $(FG_LCYAN)$(LIBFT)$(NO_COLOR)$(BG_MAKE1)"
+	$(MAKE) -C $(LIBFT_DIR) bonus
+	@echo "$(NO_COLOR)"
+
+
+## MODULES ##
+clean_libft :
+	@echo "clean $(FG_MAGENTA)module $(FG_LYELLOW)$(notdir $(LIBFT))$(NO_COLOR)$(BG_MAKE1)"
+	$(MAKE) -C $(LIBFT_DIR) fclean 
+	@echo "$(NO_COLOR)"
+
+
+clean : clean_libft
 	rm -f $(OBJS_CLEAN) 
 
 fclean : OBJS_CLEAN+=$(NAME)
@@ -106,4 +169,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus clean_libft

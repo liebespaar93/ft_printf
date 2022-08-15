@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_va_arg_index.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 22:47:38 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/06/10 07:51:31 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/15 11:54:58 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_percent.h"
+#include <ft_printf_percent.h>
 
 int	ft_va_arg_index(va_list *va, va_list va_origin, int n, int option)
 {

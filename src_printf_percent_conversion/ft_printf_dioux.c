@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_dioux.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 22:58:14 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/06/10 19:25:56 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/15 11:46:13 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ void	ft_printf_dioux(char **str, va_list *va, \
 	num = ft_printf_dioux_arg(str, va, c_syntax, c_printf_percent);
 	tmp = &(*c_printf_percent)->center;
 	if (**str == 'd' || **str == 'D' || **str == 'i')
-		(*c_printf_percent)->len += ft_itoa(num, tmp, 10);
+		(*c_printf_percent)->len += ft_itoa_base(num, tmp, 10);
 	else if (**str == 'o' || **str == 'O')
-		(*c_printf_percent)->len += ft_itoa(num, tmp, 8);
+		(*c_printf_percent)->len += ft_itoa_base(num, tmp, 8);
 	else if (**str == 'u' || **str == 'U')
-		(*c_printf_percent)->len += ft_itoa(num, tmp, 10);
+		(*c_printf_percent)->len += ft_itoa_base(num, tmp, 10);
 	else if (**str == 'x' || **str == 'X')
-		(*c_printf_percent)->len += ft_itoa(num, tmp, 16);
+		(*c_printf_percent)->len += ft_itoa_base(num, tmp, 16);
 	if (**str == 'X')
 		ft_str_upper((*c_printf_percent)->center);
 	if (num == 0 && c_syntax.precision == 0)

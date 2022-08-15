@@ -6,7 +6,7 @@
 /*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 10:00:43 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/08/13 11:23:20 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/15 11:46:13 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_printf_p(va_list *va, \
 
 	a = va_arg(*va, void *);
 	(*c_printf_percent)->len += \
-		ft_itoa((unsigned long long int)a, &tmp, 16) + 2;
+		ft_itoa_base((unsigned long long int)a, &tmp, 16) + 2;
 	(*c_printf_percent)->front = ft_strjoin("0x", "");
 	(*c_printf_percent)->center = tmp;
 	if (a == 0 && c_syntax.precision == 0)

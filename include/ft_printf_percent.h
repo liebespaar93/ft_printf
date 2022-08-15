@@ -6,7 +6,7 @@
 /*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 22:19:13 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/08/13 11:23:51 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/15 11:40:00 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <stdlib.h>
+# include <libft.h>
 
 typedef struct s_syntax
 {
@@ -86,23 +87,5 @@ void	ft_printf_a_trans(long double num, \
 	t_printf_percent **c_printf_percent, t_syntax c_syntax);
 
 /* src */
-
-int		ft_dtoa(long double value, char **str, int max_len);
-char	*ft_etoa(int e);
-int		ft_itoa(__int128 value, char **str, int index);
-void	*ft_memset(void *b, int c, size_t len);
-int		ft_str_diff(char *str, char *src);
-char	*ft_str_upper(char *str);
-int		ft_strchr_index(char *str, char c);
-int		ft_strchr_num(char **str);
-size_t	ft_strcpy(char *dst, const char *src);
-char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlcpy(char *dst, const char *src, \
-		size_t dstsize);
 int		ft_va_arg_index(va_list *va, va_list va_origin, int n, int option);
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dst, const void *src, long unsigned int n);
-int		ft_strncmp(const char *s1, const char *s2, long unsigned int n);
-void	ft_strmcpy(char **dst, char *src);
-
 #endif

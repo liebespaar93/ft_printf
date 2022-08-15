@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_a_trans.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 16:38:56 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/06/10 16:41:23 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/15 11:46:13 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_printf_a_trans(long double num, \
 	c_floatbit.num = num;
 	ft_ft_printf_a_front(c_floatbit, c_printf_percent, c_syntax, &len);
 	(*c_printf_percent)->len += len + 3;
-	ft_itoa(c_floatbit.s_bit.mant, &free_tmp, 16);
+	ft_itoa_base(c_floatbit.s_bit.mant, &free_tmp, 16);
 	(*c_printf_percent)->center = malloc(len + 1);
 	if (!(*c_printf_percent)->center)
 		return ;
@@ -66,7 +66,7 @@ void	ft_printf_a_trans(long double num, \
 	ft_ft_printf_a_center(c_printf_percent, free_tmp, len);
 	free(free_tmp);
 	(*c_printf_percent)->len += \
-		ft_itoa(c_floatbit.s_bit.expt - 1023, &free_tmp, 10) + 2;
+		ft_itoa_base(c_floatbit.s_bit.expt - 1023, &free_tmp, 10) + 2;
 	if (*free_tmp != '-')
 		(*c_printf_percent)->back = ft_strjoin("p+", free_tmp);
 	else
