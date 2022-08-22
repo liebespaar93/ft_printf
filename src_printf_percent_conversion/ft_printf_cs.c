@@ -6,7 +6,7 @@
 /*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 08:47:20 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/08/22 17:53:57 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/23 00:58:20 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ void	ft_printf_cs(char **str, va_list *va, \
 		if (c_syntax.precision != -1)
 			(*c_printf_percent)->len = c_syntax.precision;
 		(*c_printf_percent)->center = malloc((*c_printf_percent)->len + 1);
-		(*c_printf_percent)->center[(*c_printf_percent)->len] = '\0';
 		if (!(*c_printf_percent)->center)
 			return ;
-		ft_strlcpy((*c_printf_percent)->center, tmp, (*c_printf_percent)->len);
-		(*c_printf_percent)->len = ft_strlen((*c_printf_percent)->center);
+		(*c_printf_percent)->center[(*c_printf_percent)->len] = '\0';
+		ft_strlcpy((*c_printf_percent)->center, tmp, \
+			(*c_printf_percent)->len + 1);
 		(*c_printf_percent)->center[(*c_printf_percent)->len] = '\0';
 	}
 }
