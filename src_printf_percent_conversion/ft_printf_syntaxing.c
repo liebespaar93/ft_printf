@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_syntaxing.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 22:54:09 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/06/14 16:46:07 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/22 18:13:29 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_percent.h"
+#include <ft_printf_percent.h>
 
 char	*ft_printf_syntax_str(t_printf_percent *c_printf_percent, \
 	t_syntax c_syntax);

@@ -6,11 +6,11 @@
 /*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 22:54:09 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/08/13 11:24:05 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/22 16:38:34 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_percent.h"
+#include <ft_printf_percent.h>
 
 char	*ft_printf_origin(char **str, t_printf_percent **c_printf_percent);
 void	ft_c_printf_percent_free(char **str, \

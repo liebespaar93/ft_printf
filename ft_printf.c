@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoulee <kyoulee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 22:14:07 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/06/14 16:35:11 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/22 17:44:24 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <ft_printf.h>
+#include <ft_printf_percent.h>
 
 void	ft_printf_write(char *str, va_list *va, va_list va_origin, int *len);
 

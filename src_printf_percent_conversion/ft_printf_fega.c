@@ -6,11 +6,11 @@
 /*   By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:00:45 by kyoulee           #+#    #+#             */
-/*   Updated: 2022/08/15 11:46:13 by kyoulee          ###   ########.fr       */
+/*   Updated: 2022/08/22 18:13:41 by kyoulee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_percent.h"
+#include <ft_printf_percent.h>
 
 long double	ft_printf_fega_arg(va_list *va, t_syntax c_syntax);
 void		ft_printf_g_tarns(long double num, \
