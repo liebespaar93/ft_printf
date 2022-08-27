@@ -6,7 +6,7 @@
 #    By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/10 08:16:11 by kyoulee           #+#    #+#              #
-#    Updated: 2022/08/15 12:27:28 by kyoulee          ###   ########.fr        #
+#    Updated: 2022/08/27 14:36:24 by kyoulee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,8 +127,9 @@ bonus: $(NAME)
 $(OBJ_DIR) :
 	mkdir obj
 
-$(NAME) : $(OBJ_DIR) $(OBJECTS) $(LIBFT)
-	ar -src $(NAME) $(OBJECTS) $(LIBFT)
+$(NAME) : $(LIBFT) $(OBJ_DIR) $(OBJECTS)
+	cp $(LIBFT) $(NAME)
+	ar -src $(NAME) $(OBJECTS)
 
 $(OBJ_DIR)/%.o : %.c
 	$(CC) $(CPPFLAGS) $(IFLAGS) -c $< -o $@
@@ -149,20 +150,23 @@ OBJS_CLEAN = $(OBJECTS)
 
 ## MODULES ##
 $(LIBFT):
+	if [ -d $(ROOTDIR)/../Libft ]; then ln -s $(ROOTDIR)/../Libft $(LIBFT_DIR); fi
 	echo "$(FG_MAGENTA)module $(FG_LYELLOW)Libft$(NO_COLOR) -> $(FG_LCYAN)$(LIBFT)$(NO_COLOR)$(BG_MAKE1)"
 	$(MAKE) -C $(LIBFT_DIR) bonus
 	@echo "$(NO_COLOR)"
 
-
 ## MODULES ##
 clean_libft :
-	@echo "clean $(FG_MAGENTA)module $(FG_LYELLOW)$(notdir $(LIBFT))$(NO_COLOR)$(BG_MAKE1)"
-	$(MAKE) -C $(LIBFT_DIR) fclean 
-	@echo "$(NO_COLOR)"
+	@if [ -d $(LIBFT_DIR) ]; then \
+		echo "clean $(FG_MAGENTA)module $(FG_LYELLOW)$(notdir $(LIBFT))$(NO_COLOR)$(BG_MAKE1)" \
+		$(MAKE) -C $(LIBFT_DIR) fclean \
+		@echo "$(NO_COLOR)" ;\
+	fi
 
 
 clean : clean_libft
-	rm -f $(OBJS_CLEAN) 
+	rm -f $(OBJS_CLEAN)
+	find ./ -type l | xargs rm 
 
 fclean : OBJS_CLEAN+=$(NAME)
 fclean : clean
