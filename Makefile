@@ -6,7 +6,7 @@
 #    By: kyoulee <kyoulee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/10 08:16:11 by kyoulee           #+#    #+#              #
-#    Updated: 2022/08/27 14:36:24 by kyoulee          ###   ########.fr        #
+#    Updated: 2022/09/02 17:29:39 by kyoulee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ NO_COLOR = \033[0m
 
 ROOTDIR = $(abspath $(dir $(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))))
 INCLUDE_DIR = $(ROOTDIR)/include
+MODULES_DIR = $(ROOTDIR)/modules
 
 SRC_DIR = ./src
 SRC_PRINTF_DIR = ./src_printf
@@ -127,6 +128,9 @@ bonus: $(NAME)
 $(OBJ_DIR) :
 	mkdir obj
 
+$(MODULES_DIR) :
+	mkdir modules
+
 $(NAME) : $(LIBFT) $(OBJ_DIR) $(OBJECTS)
 	cp $(LIBFT) $(NAME)
 	ar -src $(NAME) $(OBJECTS)
@@ -149,7 +153,7 @@ $(OBJ_DIR)/%.o : $(SRC_PRINTF_PERCENT_CONVERSION_DIR)/%.c
 OBJS_CLEAN = $(OBJECTS)
 
 ## MODULES ##
-$(LIBFT):
+$(LIBFT): $(MODULES_DIR)
 	if [ -d $(ROOTDIR)/../Libft ]; then ln -s $(ROOTDIR)/../Libft $(LIBFT_DIR); fi
 	echo "$(FG_MAGENTA)module $(FG_LYELLOW)Libft$(NO_COLOR) -> $(FG_LCYAN)$(LIBFT)$(NO_COLOR)$(BG_MAKE1)"
 	$(MAKE) -C $(LIBFT_DIR) bonus
